@@ -175,6 +175,8 @@
     font-weight: 400;
     color: var(--wenge_brown);}
 
+  
+
   .table_cl_1{
     font-size: 16px;
     font-weight: 400;
@@ -237,44 +239,41 @@ main {
   margin-bottom: 9px;
 }
 
-ul.bulleted_list_1, ul.bulleted_list_2, ol.numbered_list{
-  list-style-type: none;
+.bulleted_list_1 li, .bulleted_list_2 li, .numbered_list li{
+  margin-left: 9px;
 }
 
-ul.bulleted_list_1 li:before {
+.numbered_list li {
+  padding-right: 30px;
+}
+
+/*In order to customize the [li marker] you need to reference the div that it's in first, and then insert [li::marker]. The div, not the ul and its class.
+
+Furthermore, this won't work is [list-style-position] is set to [inside]. You don't even need to change it at all, leave it as is. In order to properly align [ul] and its children, you'll need to use [margin] and [padding]*/
+
+.preparation li::marker{
   color: var(--dark_raspberry);
-  content: "•";
-  margin-right: 12px;
 }
 
-ul.bulleted_list_2 li:before {
+.ingredients li::marker{
   color: var(--nutmeg);
-  content: "•";
-  margin-right: 12px;
 }
 
-.ingredients ul, .instructions ol{
-  margin-left:6px; 
-}
-
-ol.numbered_list {
-  list-style: none;
-  margin-left: 42px;
-  padding-left: 0;
-  counter-reset: numbers;
-}
-
-ol.numbered_list li::before{
-  content: counter(numbers) '.';
-  counter-increment: numbers;
-
-  font-weight: 800;
+.instructions li::marker {
+  font-weight: 800; 
   color: var(--nutmeg);
-  margin-right: -15px;
-  position:relative;
-  left:-30px; 
 }
 
+/*The code bellow will create the margin of the box that contains both the bullets and its contents*/
+.preparation ul, .ingredients ul, .instructions ol {
+  margin-left: 15px;
+}
+
+/*Now, in order to modify the distance between the bullet and the content, you'll need to change the padding, but it's imprecedent that you recerence {[div] ol li}. I tried referencing {[div] ol/ul} and {[div] li} and it didn't work at all.*/
+
+.instructions ol li {
+  padding-left: 12px;
+}
 
 .ingredients, .instructions {
   margin: 36px 0px;
