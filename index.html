@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!--First Font: Young Serif-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
+  <!--Second Font: Outfit-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="recipe_card">
+      <div class="recipe_cover">
+        <img src="./assets/images/image-omelette.jpeg" alt="omelette">
+      </div>
+
+      <div class="header">
+        <h1> Simple Omelette Recipe </h1>
+        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+      </div>
+
+      <div class="preparation">
+        
+        <h3>Preparation time</h3>
+        <ul class="bulleted_list_1">
+          <li><strong>Total:</strong> Approximately 10 minutes</li>
+          <li><strong> Preparation: </strong> 5 minutes</li>
+          <li><strong> Cooking: </strong> 5 minutes</li>
+        </ul>
+      
+      </div>
+
+      <div class="ingredients">
+        <h2> Ingredients </h2>
+        <ul class="bulleted_list_2">
+          <li>2-3 large eggs </li>
+          <li>Salt, to taste </li>
+          <li>Pepper, to taste </li>
+          <li> 1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs </li>
+        </ul>
+      </div>
+
+      <hr>
+
+      <div class="instructions">
+        <h2>Instructions</h2>
+        <ol class="numbered_list">
+          <li>
+            <strong> Beat the eggs: </strong>In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+          </li>
+
+          <li>
+            <strong> Heat the pan:</strong>Place a non-stick frying pan over medium heat and add butter or oil.
+          </li>
+
+          <li>
+            <strong> Cook the omelette:</strong>In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.
+          </li>
+
+          <li>
+            <strong> Add fillings (optional): </strong> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+          </li>
+
+          <li>
+            <strong> Fold and serve: </strong> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.
+          </li>
+
+          <li>
+            <strong> Enjoy: </strong> Serve hot, with additional salt and pepper if needed.
+          </li>
+        </ol>
+      </div>
+
+      <hr>
+
+      <div class="nutrition_table">
+        <h2>Nutrition</h2>
+        <p>The table below shows nutritional values per serving without the additional fillings.</p>
+
+        <table>
+          <tr>
+            <td class="table_cl_1"> Calories</td>
+            <td class="table_cl_2"> 277kcal</td>
+          </tr>
+
+          <tr>
+            <td class="table_cl_1"> Carbs </td>
+            <td class="table_cl_2"> 0g </td>
+          </tr>
+
+          <tr>
+            <td class="table_cl_1"> Protein </td>
+            <td class="table_cl_2"> 20g </td>
+          </tr>
+
+          <tr>
+            <td class="table_cl_1"> Fat </td>
+            <td class="table_cl_2"> 22g </td>
+          </tr>
+
+
+        </table>
+
+      </div>
+
+    </div>
+  </main>
+
+</body>
+
+<!-- This first style is the basic "style-sheet" for the design. Here you will find every color variable, text styling, and other stuff. I do this beforehand in order to make the styling of the design itself more clean and streamlined-->
+<style>
+  /*I use "*{}" to zero the margin and padding for all elements beforehand. Just a quick tip that I learned on a tutorial once, and that can help make things easier down the line */
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;}
+
+  :root {
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark_raspberry: hsl(332, 51%, 32%);
+
+    --white: hsl(0, 0%, 100%);
+    --rose_white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light_grey: hsl(30, 18%, 87%);
+    --wenge_brown: hsl(30, 10%, 34%);
+    --dark_charcoal: hsl(24, 5%, 18%); }
+
+  h1{
+    font-family: 'Young Serif', serif;
+    font-size: 32px;
+    color: var(--dark_charcoal);}
+
+  h2{
+    font-family: 'Young Serif', serif;
+    font-size: 24px;
+    color: var(--nutmeg);}
+
+  h3{
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--dark_raspberry);}
+
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--wenge_brown);}
+
+  p strong {
+    font-weight: 700;}
+
+  li{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--wenge_brown);}
+
+  .table_cl_1{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--wenge_brown);}
+
+  .table_cl_2{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--nutmeg);}
+
+  hr {
+    border-top: 1pt solid var(--light_grey);}
+
+</style>
+
+<style>
+
+main {
+  background-color: var(--eggshell);
+
+  display: flex;
+  /*Specifying flex-direction may be unnecessary, but I'm adding it just in case*/
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;}
+
+.recipe_card{
+  max-width: 730px;
+  padding: 40px;
+  border-radius: 24px;
+  background-color: var(--white);
+
+  margin: 120px 0px;}
+
+.recipe_cover{
+  max-width: fit-content;}
+
+.recipe_cover img {
+  width: 100%;
+  border-radius: 12px;}
+
+.header {
+  margin: 36px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;}
+
+.preparation{
+  background-color: var(--rose_white);
+  padding: 27px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 21px;}
+
+/* Customizing ol, ul and li elements*/
+
+.bulleted_list_1 li:not(:last-child), .bulleted_list_2 li:not(:last-child), .numbered_list li:not(:last-child){
+  margin-bottom: 9px;
+}
+
+ul.bulleted_list_1, ul.bulleted_list_2, ol.numbered_list{
+  list-style-type: none;
+}
+
+ul.bulleted_list_1 li:before {
+  color: var(--dark_raspberry);
+  content: "•";
+  margin-right: 12px;
+}
+
+ul.bulleted_list_2 li:before {
+  color: var(--nutmeg);
+  content: "•";
+  margin-right: 12px;
+}
+
+.ingredients ul, .instructions ol{
+  margin-left:6px; 
+}
+
+ol.numbered_list {
+  list-style: none;
+  margin-left: 42px;
+  padding-left: 0;
+  counter-reset: numbers;
+}
+
+ol.numbered_list li::before{
+  content: counter(numbers) '.';
+  counter-increment: numbers;
+
+  font-weight: 800;
+  color: var(--nutmeg);
+  margin-right: -15px;
+  position:relative;
+  left:-30px; 
+}
+
+
+.ingredients, .instructions {
+  margin: 36px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.nutrition_table {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr:not(:last-child){
+  border-bottom: 1pt solid var(--light_grey);
+}
+
+td{
+  padding-top:16px;
+  padding-bottom:16px;
+}
+
+tr:last-child td {
+  padding-bottom: 8px;
+}
+
+.table_cl_1 {
+  padding-left: 20px;
+  width: 340px;
+}
+</style>
+
+<!--Responsive styling:mobile-->
+
+<style>
+  @media only screen and (max-width:48em) { 
+  .recipe_card{
+    margin:0px;
+    padding-top:0px;
+    padding-left:0px;
+    padding-right:0px;}
+  
+  .header, .preparation, .ingredients, .instructions, .nutrition_table {
+    padding-left:30px;
+    padding-right:30px;
+  }
+
+  .recipe_cover img {
+    border-radius: 0;
+  }
+
+  .preparation {
+    margin: 0px 30px;
+  }
+
+  hr {
+    max-width: 85vw;
+    margin: 0 auto;
+  }
+
+  .table_cl_1{
+    max-width: 170px;
+  }
+  }
+</style>
+
+</html>
